@@ -2,28 +2,37 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Carta de Amor</title>
+<title>Carta de Amor Pasional Premium</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
+
   body {
     margin: 0;
     padding: 0;
-    background: #130018;
-    font-family: 'Garamond', serif;
+    background: radial-gradient(circle at top, #1a001a, #130018 80%);
+    font-family: 'Playfair Display', serif;
     color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 30px;
   }
 
   .video-container {
     width: 80%;
     max-width: 720px;
     margin: 20px auto;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 40px rgba(255, 51, 153, 0.7);
+    box-shadow: 0 0 60px rgba(255, 51, 153, 0.7);
+    animation: videoGlow 2s infinite alternate;
+  }
+
+  @keyframes videoGlow {
+    0% { box-shadow: 0 0 40px rgba(255,51,153,0.5); }
+    100% { box-shadow: 0 0 80px rgba(255,102,204,0.8); }
   }
 
   iframe {
@@ -35,37 +44,35 @@
   .carta {
     width: 80%;
     max-width: 720px;
-    background: linear-gradient(145deg, #2b0a3d, #451360);
-    border: 2px solid #ff3399;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 0 60px rgba(255, 51, 153, 0.5);
-    line-height: 1.7;
+    background: linear-gradient(145deg, #2c0a3d, #451360);
+    border: 3px solid #ff3399;
+    border-radius: 25px;
+    padding: 50px 40px;
+    margin: 20px auto;
+    box-shadow: 0 0 80px rgba(255,51,153,0.5);
+    line-height: 1.8;
     font-size: 1.15rem;
     position: relative;
-  }
-
-  .carta p {
-    margin-bottom: 1.5em;
+    background-image: url('https://i.ibb.co/DzFDSHk/parchment-texture.jpg'); /* pergamino */
+    background-size: cover;
+    color: #fff0f5;
   }
 
   .carta::before, .carta::after {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 3px solid #ff3399;
     border-radius: 50%;
   }
 
-  .carta::before {
-    top: -25px;
-    left: -25px;
-  }
+  .carta::before { top: -30px; left: -30px; }
+  .carta::after { bottom: -30px; right: -30px; }
 
-  .carta::after {
-    bottom: -25px;
-    right: -25px;
+  .carta p {
+    margin-bottom: 1.7em;
+    text-shadow: 0 0 4px #ff3399, 0 0 8px #ff66cc;
   }
 
   .final {
@@ -73,20 +80,29 @@
     margin-top: 30px;
   }
 
-  .frase-erotica {
-    font-size: 1.3rem;
-    color: #ff66cc;
-    text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff66cc, 0 0 20px #ff3399;
-    margin-bottom: 20px;
+  .frase-erotica, .te-amo-erotico {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
     font-weight: bold;
+    animation: glowText 1.5s infinite alternate;
+    margin-bottom: 20px;
+  }
+
+  .frase-erotica {
+    color: #ff66cc;
+    text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff3399, 0 0 20px #ff66cc;
   }
 
   .te-amo-erotico {
-    font-size: 1.4rem;
     color: #ff0066;
-    font-weight: bold;
     text-shadow: 0 0 10px #ff3399, 0 0 20px #ff66cc, 0 0 30px #ff3399;
   }
+
+  @keyframes glowText {
+    0% { text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff3399, 0 0 20px #ff66cc; }
+    100% { text-shadow: 0 0 20px #ff66cc, 0 0 30px #ff3399, 0 0 40px #ff3399; }
+  }
+
 </style>
 </head>
 <body>
@@ -109,4 +125,4 @@
 </div>
 
 </body>
-</html> 
+</html>
